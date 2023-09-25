@@ -1,5 +1,5 @@
 <template>
-    <header>
+    <header :class="{ 'navbar--hidden': isNavBarHidden }">
         <div style="padding: 25px 25px" class="container">
             <div class="header">
                 <div class="logo">
@@ -44,6 +44,13 @@
     </header>
 </template>
 
-<script setup></script>
+<script setup>
+const props = defineProps({
+    isNavBarHidden: {
+        type: Boolean,
+        required: true
+    }
+})
+</script>
 
 <style lang="scss" scoped></style>

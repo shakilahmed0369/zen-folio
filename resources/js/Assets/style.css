@@ -1290,3 +1290,13 @@ pre tt:before {
         padding-left: 0 !important;
     }
 }
+
+header {
+    /* Your navbar styles */
+    transition: transform 0.3s ease-in-out;
+    background-color: #1d293a;
+}
+
+.navbar--hidden {
+    transform: translateY(-100%);
+}
