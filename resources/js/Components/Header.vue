@@ -25,10 +25,10 @@
                     </svg>
                 </div>
                 <ul class="menubar">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skill">Skill</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about" v-smooth-scroll>About</a></li>
+                    <li><a href="#skill" v-smooth-scroll>Skill</a></li>
+                    <li><a href="#portfolio" v-smooth-scroll>Portfolio</a></li>
+                    <li><a href="#contact" v-smooth-scroll>Contact</a></li>
                     <li>
                         <a
                             class="btn-download"
