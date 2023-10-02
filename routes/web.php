@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\HeroController;
 use App\Http\Controllers\ProfileController;
+use App\Models\HeroSection;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -21,7 +23,7 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('admin.layouts.master');
+    return view('admin.dashboard.index');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
@@ -31,3 +33,8 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+// Admin Routes
+Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], function(){
+    Route::resource('hero-section', HeroController::class);
+});
