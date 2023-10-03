@@ -13,7 +13,7 @@ class HeroController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index() : View
+    public function index()
     {
         $hero = HeroSection::first();
         return view('admin.hero-section.index', compact('hero'));

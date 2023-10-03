@@ -1,6 +1,6 @@
 <template>
     <App>
-        <IntroAria />
+        <IntroAria :hero="hero"/>
         <About />
         <Skill />
         <LoveToDo />
@@ -17,7 +17,11 @@ import Skill from '@/Components/Skill.vue';
 import LoveToDo from '@/Components/LoveToDo.vue';
 import Portfolio from '@/Components/Portfolio.vue';
 import Contact from '@/Components/Contact.vue';
+import { defineProps } from 'vue';
 
+defineProps({
+    hero: Array,
+})
 </script>
 
 <style lang="scss" scoped>

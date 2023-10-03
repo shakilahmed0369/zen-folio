@@ -92,12 +92,12 @@
         <div class="container">
             <div class="intro">
                 <div class="intro-text">
-                    <p>Hello! I am</p>
-                    <h1>Shakil Ahmed</h1>
-                    <h3>Full Stack Developer</h3>
+                    <p>{{ hero.title }}</p>
+                    <h1>{{ hero.name }}</h1>
+                    <h3>{{ hero.stack }}</h3>
                     <ul>
-                        <li>Web Developer</li>
-                        <li>Programmer</li>
+                        <li v-for="tag in tags">{{ tag }}</li>
+
                     </ul>
                     <div class="action">
                         <a
@@ -133,6 +133,21 @@
     </div>
 </template>
 
-<script setup></script>
+<script setup>
+import {computed, defineProps} from 'vue';
+const props = defineProps({
+    hero: Array
+})
+
+const tags = computed(() => {
+    if(props.hero && props.hero.tags) {
+        return props.hero.tags.split(',').map(tag => tag.trim())
+    }else {
+        return [];
+    }
+})
+
+
+</script>
 
 <style lang="scss" scoped></style>

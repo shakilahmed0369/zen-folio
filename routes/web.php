@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\HeroController;
 use App\Http\Controllers\ProfileController;
 use App\Models\HeroSection;
@@ -18,10 +19,10 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', function () {
-    return Inertia::render('Home');
-});
-
+// Route::get('/', function () {
+//     return Inertia::render('Home');
+// });
+Route::get('/', [FrontendController::class, 'index']);
 Route::get('/dashboard', function () {
     return view('admin.dashboard.index');
 })->middleware(['auth', 'verified'])->name('dashboard');
