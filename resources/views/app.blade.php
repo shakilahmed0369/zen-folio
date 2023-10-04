@@ -17,5 +17,8 @@
     </head>
     <body class="font-sans antialiased">
         @inertia
+        <script>
+            window.appUrl = '{{ config('app.url') }}';
+        </script>
     </body>
 </html>

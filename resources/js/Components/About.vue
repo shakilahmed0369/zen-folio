@@ -40,7 +40,7 @@
                     <div class="image">
                         <img
                             alt="profile"
-                            :src="about.image"
+                            :src="appurl + about.image"
                         />
                     </div>
                 </div>
@@ -51,6 +51,9 @@
 
 <script setup>
     import { defineProps } from 'vue';
+
+    const appurl = import.meta.env.VITE_APP_URL;
+    
     defineProps({
         about: Array
     })
