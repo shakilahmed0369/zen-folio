@@ -5,16 +5,7 @@
             <div class="about">
                 <div class="about-details">
                     <p>
-                        I am a web developer with a vast array of knowledge in
-                        many different front end and back end languages,
-                        responsive frameworks, databases, and best code
-                        practices. My objective is simply to be the best web
-                        developer that I can be and to contribute to the
-                        technology industry all that I know and can do. I am
-                        dedicated to perfecting my craft by learning from more
-                        seasoned developers, remaining humble, and continuously
-                        making strides to learn all that I can about
-                        development.
+                        {{ about.about }}
                     </p>
                     <div class="about-action">
                         <a
@@ -49,7 +40,7 @@
                     <div class="image">
                         <img
                             alt="profile"
-                            src="/static/profile-2abdc897e9ae44c178e715f4b7ebedff.jpg"
+                            :src="about.image"
                         />
                     </div>
                 </div>
@@ -58,6 +49,11 @@
     </div>
 </template>
 
-<script setup></script>
+<script setup>
+    import { defineProps } from 'vue';
+    defineProps({
+        about: Array
+    })
+</script>
 
 <style lang="scss" scoped></style>

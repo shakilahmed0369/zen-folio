@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\HeroController;
 use App\Http\Controllers\ProfileController;
@@ -38,4 +39,5 @@ require __DIR__.'/auth.php';
 // Admin Routes
 Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], function(){
     Route::resource('hero-section', HeroController::class);
+    Route::resource('about-section', AboutController::class);
 });

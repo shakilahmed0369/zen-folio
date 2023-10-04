@@ -29,7 +29,7 @@ class HeroController extends Controller
             ['id' => $id],
             $formDatas
         );
-        toastr()->success(__('Updated Successfully'));
+        toastr()->success('Updated Successfully');
 
         return redirect()->back();
     }
