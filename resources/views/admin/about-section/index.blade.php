@@ -16,13 +16,13 @@
                             <div id="image-preview" class="image-preview">
                                 <label for="image-upload" id="image-label">Choose File</label>
                                 <input type="file" name="image" id="image-upload" />
-                                <input type="hidden" name="old_image" value="{{ $about->image }}">
+                                <input type="hidden" name="old_image" value="{{ @$about->image }}">
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="">About Your Self<code>*</code></label>
-                        <textarea name="about" class="form-control summernote">{!! $about->about !!}</textarea>
+                        <textarea name="about" class="form-control summernote">{!! @$about->about !!}</textarea>
                     </div>
                     <div class="form-group">
                         <button class="btn btn-primary">Save</button>
@@ -38,7 +38,7 @@
     <script>
         $(document).ready(function(){
             $('.image-preview').css({
-                'background-image': 'url({{ asset($about->image) }})',
+                'background-image': 'url({{ asset(@$about->image) }})',
                 'background-size': 'cover',
                 'background-position': 'center center'
             })

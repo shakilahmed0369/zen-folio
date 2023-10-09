@@ -4,6 +4,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\HeroController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SkillController;
 use App\Models\HeroSection;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -40,4 +41,6 @@ require __DIR__.'/auth.php';
 Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], function(){
     Route::resource('hero-section', HeroController::class);
     Route::resource('about-section', AboutController::class);
+    Route::resource('skill-section', SkillController::class);
+
 });
