@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\About;
 use App\Models\HeroSection;
+use App\Models\Skill;
 use Inertia\Response;
 use Inertia\Inertia;
 
@@ -13,6 +14,7 @@ class FrontendController extends Controller
     {
         $hero = HeroSection::first();
         $about = About::first();
-        return Inertia::render('Home', compact('hero', 'about'));
+        $skills = Skill::all();
+        return Inertia::render('Home', compact('hero', 'about', 'skills'));
     }
 }

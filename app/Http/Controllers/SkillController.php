@@ -48,19 +48,12 @@ class SkillController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(string $id) : View
     {
-        //
+        $skill = Skill::findOrFail($id);
+        return view('admin.skill-section.edit', compact('skill'));
     }
 
     /**
@@ -68,7 +61,19 @@ class SkillController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate([
+            'name' => ['required', 'max:255'],
+            'percent' => ['required', 'integer']
+        ]);
+
+        $skill = Skill::findOrFail($id);
+        $skill->name = $request->name;
+        $skill->percent = $request->percent;
+        $skill->save();
+
+        toastr()->success('Created Successfully!');
+
+        return to_route('admin.skill-section.index');
     }
 
     /**
@@ -76,6 +81,8 @@ class SkillController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Skill::findOrFail($id)->delete();
+
+        return response(['status' => 'success', 'message' => 'Deleted Successfully']);
     }
 }

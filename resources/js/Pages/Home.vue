@@ -2,7 +2,7 @@
     <App>
         <IntroAria :hero="hero"/>
         <About :about="about" />
-        <Skill />
+        <Skill :skills="skills" />
         <LoveToDo />
         <Portfolio />
         <Contact />
@@ -22,6 +22,8 @@ import { defineProps } from 'vue';
 defineProps({
     hero: Array,
     about: Array,
+    skills: Array,
+
 })
 </script>
 

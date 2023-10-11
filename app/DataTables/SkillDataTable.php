@@ -23,8 +23,8 @@ class SkillDataTable extends DataTable
     {
         return (new EloquentDataTable($query))
             ->addColumn('action', function($query){
-                $edit = '<a class="btn btn-primary mx-2" herf="'.route('admin.skill-section.edit', $query->id).'" ><i class="fas fa-edit text-light"></i></a>';
-                $delete = '<a class="btn btn-danger mx-2" herf="'.route('admin.skill-section.destroy', $query->id).'" ><i class="fas fa-trash text-light"></i></a>';
+                $edit = '<a class="btn btn-primary mx-2" href="'.route('admin.skill-section.edit', $query->id).'" ><i class="fas fa-edit text-light"></i></a>';
+                $delete = '<a class="btn btn-danger mx-2 delete-item" href="'.route('admin.skill-section.destroy', $query->id).'"><i class="fas fa-trash text-light"></i></a>';
 
                 return $edit.$delete;
             })
