@@ -3,12 +3,10 @@
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\HeroController;
+use App\Http\Controllers\LoveToDoController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SkillController;
-use App\Models\HeroSection;
-use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,5 +40,7 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], 
     Route::resource('hero-section', HeroController::class);
     Route::resource('about-section', AboutController::class);
     Route::resource('skill-section', SkillController::class);
+    Route::resource('love-to-do', LoveToDoController::class);
+
 
 });

@@ -3,7 +3,7 @@
         <IntroAria :hero="hero"/>
         <About :about="about" />
         <Skill :skills="skills" />
-        <LoveToDo />
+        <LoveToDo :loveToDos="loveToDos" />
         <Portfolio />
         <Contact />
     </App>
@@ -23,6 +23,7 @@ defineProps({
     hero: Array,
     about: Array,
     skills: Array,
+    loveToDos: Array
 
 })
 </script>
