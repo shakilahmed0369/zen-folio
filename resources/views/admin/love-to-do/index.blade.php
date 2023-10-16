@@ -24,7 +24,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="">Title<code>  (leave empty for hide)</code></label>
-                                <input type="text" class="form-control" name="title_one" value="{{ $loveToDo->title_one }}">
+                                <input type="text" class="form-control" name="title_one" value="{{ @$loveToDo->title_one }}">
                             </div>
                         </div>
                         <div class="col-md-3">
