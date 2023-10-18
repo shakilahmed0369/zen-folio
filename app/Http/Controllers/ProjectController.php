@@ -3,12 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\DataTables\ProjectDataTable;
+use App\Http\Requests\ProjectStoreRequest;
+use App\Http\Requests\ProjectStorRequest;
+use App\Models\Project;
+use App\Traits\FileUploadTrait;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
 class ProjectController extends Controller
 {
+    use FileUploadTrait;
     /**
      * Display a listing of the resource.
      */
@@ -28,9 +33,21 @@ class ProjectController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(ProjectStoreRequest $request)
     {
-        //
+        $imagePath = $this->fileUpload($request, 'thumbnail');
+
+        $project = new Project();
+        $project->thumbnail = $imagePath;
+        $project->short_description = $request->short_description;
+        $project->tags = $request->tags;
+        $project->git_link = $request->git_link;
+        $project->live_link = $request->live_link;
+        $project->save();
+
+        toastr()->success('Created Successfully');
+
+        return to_route('admin.projects.index');
     }
 
     /**
