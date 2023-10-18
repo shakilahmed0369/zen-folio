@@ -51,6 +51,8 @@
 
             <li><a class="nav-link" href="{{ route('admin.love-to-do.index') }}"><i class="far fa-square"></i> <span>Love to Do Section</span></a></li>
 
+            <li><a class="nav-link" href="{{ route('admin.projects.index') }}"><i class="far fa-square"></i> <span>Projects</span></a></li>
+
             <li class="dropdown">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
                     <span>Layout</span></a>
