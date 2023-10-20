@@ -22,7 +22,16 @@ class ProjectDataTable extends DataTable
     public function dataTable(QueryBuilder $query): EloquentDataTable
     {
         return (new EloquentDataTable($query))
-            ->addColumn('action', 'project.action')
+            ->addColumn('action', function($query){
+                $edit = '<a class="btn btn-primary mx-2" href="'.route('admin.projects.edit', $query->id).'" ><i class="fas fa-edit text-light"></i></a>';
+                $delete = '<a class="btn btn-danger mx-2 delete-item" href="'.route('admin.projects.destroy', $query->id).'"><i class="fas fa-trash text-light"></i></a>';
+
+                return $edit.$delete;
+            })
+            ->addColumn('thumbnail', function($query){
+                return '<img width="200" src="'.asset($query->thumbnail).'" />';
+            })
+            ->rawColumns(['action', 'thumbnail'])
             ->setRowId('id');
     }
 
@@ -64,12 +73,12 @@ class ProjectDataTable extends DataTable
         return [
             Column::make('id'),
             Column::make('thumbnail'),
-            Column::make(''),
-
+            Column::make('name'),
+            Column::make('short_description'),
             Column::computed('action')
                   ->exportable(false)
                   ->printable(false)
-                  ->width(60)
+                  ->width(200)
                   ->addClass('text-center'),
         ];
     }

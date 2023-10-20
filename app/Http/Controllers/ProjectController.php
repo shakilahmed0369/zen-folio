@@ -52,19 +52,12 @@ class ProjectController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      */
     public function edit(string $id)
     {
-        //
+        $project = Project::findOrFail($id);
+        return view('admin.project.edit', compact('project'));
     }
 
     /**
@@ -72,7 +65,20 @@ class ProjectController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $imagePath = $this->fileUpload($request, 'thumbnail', $request->old_thumbnail);
+
+        $project = Project::findOrFail($id);
+        $project->thumbnail = !empty($imagePath) ? $imagePath : $request->old_thumbnail;
+        $project->name = $request->name;
+        $project->short_description = $request->short_description;
+        $project->tags = $request->tags;
+        $project->git_link = $request->git_link;
+        $project->live_link = $request->live_link;
+        $project->save();
+
+        toastr()->success('Update Successfully');
+
+        return to_route('admin.projects.index');
     }
 
     /**
