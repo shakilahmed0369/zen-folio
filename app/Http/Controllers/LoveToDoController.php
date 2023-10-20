@@ -26,10 +26,10 @@ class LoveToDoController extends Controller
     public function update(LoveToDoUpdateRequest $request, string $id)
     {
         // Handle images
-        $image_one = $this->fileUpload($request, 'image_one', 'old_image_one');
-        $image_two = $this->fileUpload($request, 'image_two', 'old_image_two');
-        $image_three = $this->fileUpload($request, 'image_three', 'old_image_three');
-        $image_four = $this->fileUpload($request, 'image_four', 'old_image_four');
+        $image_one = $this->fileUpload($request, 'image_one', $request->old_image_one);
+        $image_two = $this->fileUpload($request, 'image_two', $request->old_image_two);
+        $image_three = $this->fileUpload($request, 'image_three', $request->old_image_three);
+        $image_four = $this->fileUpload($request, 'image_four', $request->old_image_four);
 
         // save data
         LoveToDo::UpdateOrCreate(
