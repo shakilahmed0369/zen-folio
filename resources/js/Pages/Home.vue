@@ -4,7 +4,7 @@
         <About :about="about" />
         <Skill :skills="skills" />
         <LoveToDo :loveToDos="loveToDos" />
-        <Portfolio />
+        <Portfolio :projects="projects" />
         <Contact />
     </App>
 </template>
@@ -23,7 +23,8 @@ defineProps({
     hero: Array,
     about: Array,
     skills: Array,
-    loveToDos: Array
+    loveToDos: Array,
+    projects: Array,
 
 })
 </script>
