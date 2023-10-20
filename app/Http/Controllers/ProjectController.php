@@ -39,6 +39,7 @@ class ProjectController extends Controller
 
         $project = new Project();
         $project->thumbnail = $imagePath;
+        $project->name = $request->name;
         $project->short_description = $request->short_description;
         $project->tags = $request->tags;
         $project->git_link = $request->git_link;

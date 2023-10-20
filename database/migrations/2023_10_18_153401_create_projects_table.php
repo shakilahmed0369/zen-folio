@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
             $table->string('thumbnail');
+            $table->string('name');
             $table->string('short_description');
             $table->string('tags');
             $table->text('git_link')->nullable();

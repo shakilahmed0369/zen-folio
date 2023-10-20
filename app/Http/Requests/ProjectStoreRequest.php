@@ -16,6 +16,7 @@ class ProjectStoreRequest extends FormRequest
     {
         return [
             'thumbnail' => ['required', 'image'],
+            'name' => ['required', 'max:255'],
             'short_description' => ['required', 'max:255'],
             'tags' => ['required'],
             'status' => ['required', 'boolean']

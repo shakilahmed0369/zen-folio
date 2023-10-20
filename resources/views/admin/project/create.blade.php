@@ -21,6 +21,11 @@
                     </div>
 
                 <div class="form-group">
+                    <label for="">Name <code>*</code></label>
+                    <input type="text" class="form-control" name="name" required>
+                </div>
+
+                <div class="form-group">
                     <label for="">Short Description<code>*</code></label>
                     <textarea name="short_description" class="form-control"></textarea>
                 </div>
