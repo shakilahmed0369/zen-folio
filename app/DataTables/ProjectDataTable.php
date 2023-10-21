@@ -24,9 +24,12 @@ class ProjectDataTable extends DataTable
         return (new EloquentDataTable($query))
             ->addColumn('action', function($query){
                 $edit = '<a class="btn btn-primary mx-2" href="'.route('admin.projects.edit', $query->id).'" ><i class="fas fa-edit text-light"></i></a>';
+
                 $delete = '<a class="btn btn-danger mx-2 delete-item" href="'.route('admin.projects.destroy', $query->id).'"><i class="fas fa-trash text-light"></i></a>';
 
-                return $edit.$delete;
+                $image = '<a class="btn btn-primary mx-2" href="'.route('admin.project-images.index', ['id' => $query->id]).'" ><i class="fas fa-image text-light"></i></a>';
+
+                return $edit.$delete.$image;
             })
             ->addColumn('thumbnail', function($query){
                 return '<img width="200" src="'.asset($query->thumbnail).'" />';

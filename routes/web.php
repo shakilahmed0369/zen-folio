@@ -6,7 +6,9 @@ use App\Http\Controllers\HeroController;
 use App\Http\Controllers\LoveToDoController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\ProjectImageController;
 use App\Http\Controllers\SkillController;
+use App\Models\ProjectImage;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -43,6 +45,7 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], 
     Route::resource('skill-section', SkillController::class);
     Route::resource('love-to-do', LoveToDoController::class);
     Route::resource('projects', ProjectController::class);
+    Route::resource('project-images', ProjectImageController::class);
 
 
 
