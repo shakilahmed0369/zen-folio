@@ -5,7 +5,7 @@
         <Skill :skills="skills" />
         <LoveToDo :loveToDos="loveToDos" />
         <Portfolio :projects="projects" />
-        <Contact />
+        <Contact :contact="contact"/>
     </App>
 </template>
 
@@ -25,6 +25,7 @@ defineProps({
     skills: Array,
     loveToDos: Array,
     projects: Array,
+    contact: Array
 
 })
 </script>

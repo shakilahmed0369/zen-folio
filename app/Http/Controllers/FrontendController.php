@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\About;
+use App\Models\Contact;
 use App\Models\HeroSection;
 use App\Models\LoveToDo;
 use App\Models\Project;
@@ -20,7 +21,8 @@ class FrontendController extends Controller
         $skills = Skill::all();
         $loveToDos = LoveToDo::first();
         $projects = Project::where('status', 1)->get();
-        return Inertia::render('Home', compact('hero', 'about', 'skills', 'loveToDos', 'projects'));
+        $contact = Contact::first();
+        return Inertia::render('Home', compact('hero', 'about', 'skills', 'loveToDos', 'projects', 'contact'));
     }
 
     function showProject(string $id) {

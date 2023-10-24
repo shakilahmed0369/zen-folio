@@ -5,10 +5,7 @@
             <div class="contact">
                 <div class="contact-status">
                     <p>
-                        I am interested in working with any company that thinks
-                        my skill will be helpful for them. If you are looking
-                        for someone like me, please let me know. Or you can just
-                        &#x27;say hi&#x27; to me.
+                        {{ contact.about }}
                     </p>
                     <div>
                         <a
@@ -21,7 +18,7 @@
                             target=""
                             rel=""
                             class="btn"
-                            href="mailto:shakilahmed0369@gmail.com"
+                            :href="'mailto:'+contact.email"
                             >Contact Me</a
                         >
                     </div>
@@ -31,20 +28,20 @@
                         <li>
                             <h5>Email</h5>
                             <p>
-                                shakilahmed0369@gmail.com
+                                {{ contact.email }}
                                 <span>(Recommended)</span>
                             </p>
                         </li>
                         <li>
                             <h5>Social</h5>
                             <p>
-                                Facebook/Twitter - @shakilahmed0369
+                                {{ contact.social }}
                                 <span>(Always Available)</span>
                             </p>
                         </li>
                         <li>
                             <h5>Address</h5>
-                            <p>Mohammadpur, Dhaka, Bangladesh - 1207</p>
+                            <p>{{ contact.address }}</p>
                         </li>
                     </ul>
                 </div>
@@ -53,6 +50,10 @@
     </div>
 </template>
 
-<script setup></script>
+<script setup>
+defineProps({
+    contact: Array
+})
+</script>
 
 <style lang="scss" scoped></style>

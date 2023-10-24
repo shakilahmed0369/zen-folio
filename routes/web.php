@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\HeroController;
 use App\Http\Controllers\LoveToDoController;
@@ -48,6 +49,7 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], 
     Route::resource('love-to-do', LoveToDoController::class);
     Route::resource('projects', ProjectController::class);
     Route::resource('project-images', ProjectImageController::class);
+    Route::resource('contact', ContactController::class);
 
 
 
