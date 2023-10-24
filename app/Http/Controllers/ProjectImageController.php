@@ -2,10 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Project;
 use App\Models\ProjectImage;
 use App\Traits\FileUploadTrait;
-use Illuminate\Console\View\Components\Task;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -45,30 +43,6 @@ class ProjectImageController extends Controller
         toastr()->success('Updated Succesfully!');
 
         return redirect()->back();
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
     }
 
     /**

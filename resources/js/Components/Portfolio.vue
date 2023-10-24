@@ -14,7 +14,7 @@
                             <img alt="Galaxy Telecom" :src="project.thumbnail" />
                         </div>
                         <div class="details">
-                            <h4><a href="/show">{{ project.name }}</a></h4>
+                            <h4><Link :href="route('project.show', project.id)">{{ project.name }}</Link></h4>
                             <p>
                                 {{ project.short_description }}
                             </p>
@@ -70,6 +70,7 @@
 </template>
 
 <script setup>
+import { Link } from '@inertiajs/vue3'
 import {computed, defineProps} from 'vue';
 defineProps({
     projects: Array

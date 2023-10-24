@@ -25,7 +25,9 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return Inertia::render('Home');
 // });
-Route::get('/', [FrontendController::class, 'index']);
+Route::get('/', [FrontendController::class, 'index'])->name('home');
+Route::get('/project/{id}', [FrontendController::class, 'showProject'])->name('project.show');
+
 Route::get('/dashboard', function () {
     return view('admin.dashboard.index');
 })->middleware(['auth', 'verified'])->name('dashboard');

@@ -4,13 +4,10 @@ namespace App\Http\Controllers;
 
 use App\DataTables\ProjectDataTable;
 use App\Http\Requests\ProjectStoreRequest;
-use App\Http\Requests\ProjectStorRequest;
 use App\Models\Project;
 use App\Traits\FileUploadTrait;
-use GuzzleHttp\Handler\Proxy;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-use Illuminate\Testing\LoggedExceptionCollection;
 use Illuminate\View\View;
 
 class ProjectController extends Controller
