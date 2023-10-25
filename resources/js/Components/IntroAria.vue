@@ -96,6 +96,7 @@
                             rel=""
                             class="btn"
                             href="#about"
+                            v-smooth-scroll
                             >About Me</a
                         >
                     </div>

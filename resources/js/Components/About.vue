@@ -32,6 +32,7 @@
                             rel=""
                             class="btn"
                             href="#skill"
+                            v-smooth-scroll
                             >My Skills</a
                         >
                     </div>
@@ -53,7 +54,7 @@
     import { defineProps } from 'vue';
 
     const appurl = import.meta.env.VITE_APP_URL;
-    
+
     defineProps({
         about: Array
     })
