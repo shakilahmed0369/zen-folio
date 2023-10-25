@@ -9,6 +9,7 @@ use App\Models\LoveToDo;
 use App\Models\Project;
 use App\Models\ProjectImage;
 use App\Models\Skill;
+use App\Models\Social;
 use Inertia\Response;
 use Inertia\Inertia;
 
@@ -22,7 +23,8 @@ class FrontendController extends Controller
         $loveToDos = LoveToDo::first();
         $projects = Project::where('status', 1)->get();
         $contact = Contact::first();
-        return Inertia::render('Home', compact('hero', 'about', 'skills', 'loveToDos', 'projects', 'contact'));
+        $social = Social::first();
+        return Inertia::render('Home', compact('hero', 'about', 'skills', 'loveToDos', 'projects', 'contact', 'social'));
     }
 
     function showProject(string $id) {

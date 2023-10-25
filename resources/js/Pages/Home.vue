@@ -1,6 +1,6 @@
 <template>
     <App>
-        <IntroAria :hero="hero"/>
+        <IntroAria :hero="hero" :social="social" j/>
         <About :about="about" />
         <Skill :skills="skills" />
         <LoveToDo :loveToDos="loveToDos" />
@@ -25,7 +25,8 @@ defineProps({
     skills: Array,
     loveToDos: Array,
     projects: Array,
-    contact: Array
+    contact: Array,
+    social: Array
 
 })
 </script>
