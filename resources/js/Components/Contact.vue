@@ -5,7 +5,7 @@
             <div class="contact">
                 <div class="contact-status">
                     <p>
-                        {{ contact.about }}
+                        {{ contact?.about }}
                     </p>
                     <div>
                         <a
@@ -18,7 +18,7 @@
                             target=""
                             rel=""
                             class="btn"
-                            :href="'mailto:'+contact.email"
+                            :href="'mailto:'+contact?.email"
                             >Contact Me</a
                         >
                     </div>
@@ -28,20 +28,20 @@
                         <li>
                             <h5>Email</h5>
                             <p>
-                                {{ contact.email }}
+                                {{ contact?.email }}
                                 <span>(Recommended)</span>
                             </p>
                         </li>
                         <li>
                             <h5>Social</h5>
                             <p>
-                                {{ contact.social }}
+                                {{ contact?.social }}
                                 <span>(Always Available)</span>
                             </p>
                         </li>
                         <li>
                             <h5>Address</h5>
-                            <p>{{ contact.address }}</p>
+                            <p>{{ contact?.address }}</p>
                         </li>
                     </ul>
                 </div>

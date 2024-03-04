@@ -5,7 +5,7 @@
             <div class="about">
                 <div class="about-details">
                     <p>
-                        {{ about.about }}
+                        {{ about?.about }}
                     </p>
                     <div class="about-action">
                         <a
@@ -41,7 +41,7 @@
                     <div class="image">
                         <img
                             alt="profile"
-                            :src="appurl + about.image"
+                            :src="appurl + about?.image"
                         />
                     </div>
                 </div>

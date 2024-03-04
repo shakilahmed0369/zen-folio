@@ -5,33 +5,33 @@
                 <p>Love To Do</p>
             </div>
             <div class="love-to-do">
-                <div class="stickpad" v-if="loveToDos.title_one">
+                <div class="stickpad" v-if="loveToDos?.title_one">
                     <img
                         alt=""
-                        :src="loveToDos.image_one"
+                        :src="loveToDos?.image_one"
                     />
-                    <h4>{{ loveToDos.title_one }}</h4>
+                    <h4>{{ loveToDos?.title_one }}</h4>
                 </div>
-                <div class="stickpad" v-if="loveToDos.title_two">
+                <div class="stickpad" v-if="loveToDos?.title_two">
                     <img
                         alt=""
-                        :src="loveToDos.image_two"
+                        :src="loveToDos?.image_two"
                     />
-                    <h4>{{ loveToDos.title_two }}</h4>
+                    <h4>{{ loveToDos?.title_two }}</h4>
                 </div>
-                <div class="stickpad" v-if="loveToDos.title_three">
+                <div class="stickpad" v-if="loveToDos?.title_three">
                     <img
                         alt=""
-                        :src="loveToDos.image_three"
+                        :src="loveToDos?.image_three"
                     />
-                    <h4>{{ loveToDos.title_three }}</h4>
+                    <h4>{{ loveToDos?.title_three }}</h4>
                 </div>
-                <div class="stickpad" v-if="loveToDos.title_four">
+                <div class="stickpad" v-if="loveToDos?.title_four">
                     <img
                         alt=""
-                        :src="loveToDos.image_four"
+                        :src="loveToDos?.image_four"
                     />
-                    <h4>{{ loveToDos.title_four }}</h4>
+                    <h4>{{ loveToDos?.title_four }}</h4>
                 </div>
             </div>
         </div>

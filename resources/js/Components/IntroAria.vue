@@ -2,7 +2,7 @@
     <div class="intro-area">
         <div style="height: 320px" class="title left social">
             <ul>
-                <li v-if="social.github">
+                <li v-if="social?.github">
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -12,7 +12,7 @@
                     </a>
                 </li>
 
-                <li v-if="social.linkedin">
+                <li v-if="social?.linkedin">
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -21,7 +21,7 @@
                         <Linkedin />
                     </a>
                 </li>
-                <li v-if="social.x">
+                <li v-if="social?.x">
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -31,7 +31,7 @@
                     </a>
                 </li>
 
-                <li v-if="social.stackoverflow">
+                <li v-if="social?.stackoverflow">
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -40,7 +40,7 @@
                         <Stackoverflow />
                     </a>
                 </li>
-                <li v-if="social.facebook">
+                <li v-if="social?.facebook">
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -49,7 +49,7 @@
                         <Facebook />
                     </a>
                 </li>
-                <li v-if="social.leecode">
+                <li v-if="social?.leecode">
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -65,9 +65,9 @@
         <div class="container">
             <div class="intro">
                 <div class="intro-text">
-                    <p>{{ hero.title }}</p>
-                    <h1>{{ hero.name }}</h1>
-                    <h3>{{ hero.stack }}</h3>
+                    <p>{{ hero?.title }}</p>
+                    <h1>{{ hero?.name }}</h1>
+                    <h3>{{ hero?.stack }}</h3>
                     <ul>
                         <li v-for="tag in tags">{{ tag }}</li>
                     </ul>

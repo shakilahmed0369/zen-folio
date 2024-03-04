@@ -1,6 +1,6 @@
 <template>
     <App>
-        <IntroAria :hero="hero" :social="social" j/>
+        <IntroAria :hero="hero" :social="social" />
         <About :about="about" />
         <Skill :skills="skills" />
         <LoveToDo :loveToDos="loveToDos" />
