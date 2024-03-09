@@ -202,7 +202,6 @@ const _sfc_main$5 = {
     about: Array
   },
   setup(__props) {
-    const appurl = {}.VITE_APP_URL;
     return (_ctx, _push, _parent, _attrs) => {
       var _a, _b;
       const _directive_smooth_scroll = resolveDirective("smooth-scroll");
@@ -215,7 +214,7 @@ const _sfc_main$5 = {
         rel: "",
         class: "btn",
         href: "#skill"
-      }, ssrGetDirectiveProps(_ctx, _directive_smooth_scroll)))}>My Skills</a></div></div><div class="about-image"><div class="image"><img alt="profile"${ssrRenderAttr("src", unref(appurl) + ((_b = __props.about) == null ? void 0 : _b.image))}></div></div></div></div></div>`);
+      }, ssrGetDirectiveProps(_ctx, _directive_smooth_scroll)))}>My Skills</a></div></div><div class="about-image"><div class="image"><img alt="profile"${ssrRenderAttr("src", "/" + ((_b = __props.about) == null ? void 0 : _b.image))}></div></div></div></div></div>`);
     };
   }
 };

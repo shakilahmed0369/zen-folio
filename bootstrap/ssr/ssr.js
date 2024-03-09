@@ -493,7 +493,7 @@ createServer(
     page,
     render: renderToString,
     title: (title) => `${title} - ${appName}`,
-    resolve: (name) => resolvePageComponent(`./Pages/${name}.vue`, /* @__PURE__ */ Object.assign({ "./Pages/Auth/ConfirmPassword.vue": () => import("./assets/ConfirmPassword-be783744.js"), "./Pages/Auth/ForgotPassword.vue": () => import("./assets/ForgotPassword-957221a5.js"), "./Pages/Auth/Login.vue": () => import("./assets/Login-79332e7c.js"), "./Pages/Auth/Register.vue": () => import("./assets/Register-9df8814b.js"), "./Pages/Auth/ResetPassword.vue": () => import("./assets/ResetPassword-94f3ab72.js"), "./Pages/Auth/VerifyEmail.vue": () => import("./assets/VerifyEmail-9a04b6b5.js"), "./Pages/Home.vue": () => import("./assets/Home-62797a43.js"), "./Pages/Project.vue": () => import("./assets/Project-db147381.js") })),
+    resolve: (name) => resolvePageComponent(`./Pages/${name}.vue`, /* @__PURE__ */ Object.assign({ "./Pages/Auth/ConfirmPassword.vue": () => import("./assets/ConfirmPassword-be783744.js"), "./Pages/Auth/ForgotPassword.vue": () => import("./assets/ForgotPassword-957221a5.js"), "./Pages/Auth/Login.vue": () => import("./assets/Login-79332e7c.js"), "./Pages/Auth/Register.vue": () => import("./assets/Register-9df8814b.js"), "./Pages/Auth/ResetPassword.vue": () => import("./assets/ResetPassword-94f3ab72.js"), "./Pages/Auth/VerifyEmail.vue": () => import("./assets/VerifyEmail-9a04b6b5.js"), "./Pages/Home.vue": () => import("./assets/Home-7a2c7265.js"), "./Pages/Project.vue": () => import("./assets/Project-44568156.js") })),
     setup({ App, props, plugin }) {
       return createSSRApp({ render: () => h$1(App, props) }).use(plugin).use(I, {
         ...page.props.ziggy,

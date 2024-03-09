@@ -41,7 +41,7 @@
                     <div class="image">
                         <img
                             alt="profile"
-                            :src="appurl + about?.image"
+                            :src="'/' + about?.image"
                         />
                     </div>
                 </div>

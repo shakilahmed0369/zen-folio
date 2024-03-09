@@ -9,7 +9,7 @@
                     <div class="stickpad">
                         <h4>{{ project.name }}</h4>
                         <p style="margin-top: 5px;">{{ project.short_description }}</p>
-                        <img v-for="(image, index) in projectImages" :key="index" style="width: 100%; margin-top: 20px; border-radius: 5px;" :src="appurl+image.image" alt="galaxtelicom.jpg">
+                        <img v-for="(image, index) in projectImages" :key="index" style="width: 100%; margin-top: 20px; border-radius: 5px;" :src="'/'+image.image" alt="galaxtelicom.jpg">
                     </div>
                 </div>
             </div>
