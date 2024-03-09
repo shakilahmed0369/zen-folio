@@ -11,6 +11,7 @@ use App\Http\Controllers\ProjectImageController;
 use App\Http\Controllers\SkillController;
 use App\Http\Controllers\SocialController;
 use App\Models\ProjectImage;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,7 +24,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('/clear', function(){
+    Artisan::call('optimize:clear');
+});
 // Route::get('/', function () {
 //     return Inertia::render('Home');
 // });
