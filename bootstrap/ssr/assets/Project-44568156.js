@@ -11,11 +11,10 @@ const _sfc_main$1 = {
     projectImages: Array
   },
   setup(__props) {
-    const appurl = {}.VITE_APP_URL;
     return (_ctx, _push, _parent, _attrs) => {
       _push(`<div${ssrRenderAttrs(_attrs)}><div><div class="container"><div style="${ssrRenderStyle({ "height": "160px" })}" class="title left"><p>Project view</p></div><div style="${ssrRenderStyle({ "padding-left": "50px", "padding-right": "0px" })}" class="love-to-do"><div class="stickpad"><h4>${ssrInterpolate(__props.project.name)}</h4><p style="${ssrRenderStyle({ "margin-top": "5px" })}">${ssrInterpolate(__props.project.short_description)}</p><!--[-->`);
       ssrRenderList(__props.projectImages, (image, index) => {
-        _push(`<img style="${ssrRenderStyle({ "width": "100%", "margin-top": "20px", "border-radius": "5px" })}"${ssrRenderAttr("src", unref(appurl) + image.image)} alt="galaxtelicom.jpg">`);
+        _push(`<img style="${ssrRenderStyle({ "width": "100%", "margin-top": "20px", "border-radius": "5px" })}"${ssrRenderAttr("src", "/" + image.image)} alt="galaxtelicom.jpg">`);
       });
       _push(`<!--]--></div></div></div>`);
       _push(ssrRenderComponent(unref(Link), {
